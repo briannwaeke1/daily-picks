@@ -1,7 +1,16 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import { Container, Nav, NavItem } from "react-bootstrap";
-import { Dropdown } from "react-bootstrap";
+import {
+	Container,
+	Nav,
+	NavItem,
+	Button,
+	Badge,
+	Dropdown,
+	FormControl
+} from "react-bootstrap";
+
+import { GrNotes } from "react-icons/gr";
 
 function Header() {
 	return (
@@ -12,9 +21,17 @@ function Header() {
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link href="#upcoming">Home</Nav.Link>
-							<Nav.Link href="#pricing">Leaderboard</Nav.Link>
+							<Navbar.Text>
+								<FormControl
+									style={{ width: 500 }}
+									type="search"
+									placeholder="Search for game..."
+									className="m-auto"
+									aria-label="Search"
+								/>
+							</Navbar.Text>
 						</Nav>
+
 						<Nav>
 							<Dropdown
 								as={NavItem}
@@ -23,15 +40,32 @@ function Header() {
 								align="end"
 							>
 								<Dropdown.Toggle id="dropdown-autoclose-false">
-									Bet Slip
+									<GrNotes fontSize="25px" /> <Badge>{2}</Badge>
 								</Dropdown.Toggle>
 
 								<Dropdown.Menu className="bet-slip-dropdown-menu">
 									<Dropdown.Header>Pending Picks</Dropdown.Header>
-									<Dropdown.Item href="#">Menu Item</Dropdown.Item>
-									<Dropdown.Item href="#">Menu Item</Dropdown.Item>
+									<Dropdown.Item>Menu Item</Dropdown.Item>
+									<Dropdown.Item>Menu Item</Dropdown.Item>
 									<Dropdown.Divider />
-									<Dropdown.Item href="#">Menu Item</Dropdown.Item>
+									<div className="dropdown-footer">
+										<div>
+											<Button
+												variant="primary"
+												style={{ margin: "0 10px", padding: "5px 60px" }}
+											>
+												Submit Picks
+											</Button>
+										</div>
+										<div>
+											<Button
+												variant="danger"
+												style={{ margin: "0 10px", padding: "5px 60px" }}
+											>
+												Remove All
+											</Button>
+										</div>
+									</div>
 								</Dropdown.Menu>
 							</Dropdown>
 							<Nav.Link eventKey={2} href="#memes">
