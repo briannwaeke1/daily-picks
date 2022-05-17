@@ -13,9 +13,12 @@ const Context = ({ children }) => {
 			date: "2022-05-06T19:00:00",
 			channel: "ESPN",
 			awayTeamName: "Miami Heat",
+
 			awayTeamShort: "Heat",
+
 			homeTeamName: "Philadelphia 76ers",
 			homeTeamShort: "76ers",
+
 			awayTeamLogo:
 				"https://upload.wikimedia.org/wikipedia/en/0/0e/Philadelphia_76ers_logo.svg",
 			homeTeamLogo:
@@ -30,8 +33,10 @@ const Context = ({ children }) => {
 			channel: "TNT",
 			awayTeamName: "Phoenix Suns",
 			awayTeamShort: "Suns",
+
 			homeTeamName: "Dallas Mavericks",
 			homeTeamShort: "Mavericks",
+
 			awayTeamLogo:
 				"https://upload.wikimedia.org/wikipedia/en/d/dc/Phoenix_Suns_logo.svg",
 			homeTeamLogo:
@@ -49,7 +54,7 @@ const Context = ({ children }) => {
 		awayTeamSelected: false
 	});
 
-	console.log(gameState);
+	console.log(games);
 
 	return (
 		<Betslip.Provider value={{ state, dispatch, gameState, gameDispatch }}>

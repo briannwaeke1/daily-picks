@@ -8,7 +8,7 @@ export const betslipReducer = (state, action) => {
 		case "REMOVE_FROM_BETSLIP":
 			return {
 				...state,
-				betslip: state.betslip.filter(c => c.id !== action.payload.id)
+				betslip: state.betslip.filter(c => c.i !== action.payload.id)
 			};
 		default:
 			return state;

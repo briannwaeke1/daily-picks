@@ -1,14 +1,14 @@
 import { Card, Button } from "react-bootstrap";
-import { CartState } from "../../Context/Context";
+import { GameState } from "../../Context/Context";
 
 const Game = ({ game }) => {
 	const {
-		state: { cart },
+		state: { game },
 		dispatch
-	} = CartState();
+	} = GameState();
 
 	return (
-		<div className="products">
+		<div className="games">
 			<Card>
 				<Card.Img variant="top" src={prod.image} alt={prod.name} />
 				<Card.Body>

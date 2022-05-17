@@ -12,8 +12,11 @@ import {
 } from "react-bootstrap";
 
 import { GrNotes } from "react-icons/gr";
+import { BetslipState } from "../Context/Context";
 
 function Header() {
+	const { state } = BetslipState();
+	console.log(state);
 	return (
 		<div>
 			<Navbar
@@ -59,7 +62,11 @@ function Header() {
 									</div>
 								</Dropdown.Menu>
 							</Dropdown>
-							<Nav.Link eventKey={2} href="#login">
+							<Nav.Link
+								eventKey={2}
+								href="#login"
+								className={styles.loginButton}
+							>
 								Log in
 							</Nav.Link>
 						</Nav>
