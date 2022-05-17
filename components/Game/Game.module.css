@@ -1,0 +1,12 @@
+.gameContainer {
+	display: flex;
+	width: 78%;
+	padding: 20px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.games {
+	width: 30%;
+	margin: 10px;
+}
